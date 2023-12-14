@@ -15,7 +15,7 @@ export type AthleteInformationResponse = {
   // updatedAt: Date;
   // badgeTypeID: number;
   // profileMedium: string;
-  // profile: string;
+  profile: string;
   // friend: null;
   // follower: null;
   // followerCount: number;
@@ -39,7 +39,7 @@ type Shoe = {
   distance: number;
 };
 
-export const getAthleteInformation =
+export const fetchAthleteInformation =
   async (): Promise<AthleteInformationResponse> => {
     const options: RequestInit = {
       method: "GET",
@@ -51,9 +51,5 @@ export const getAthleteInformation =
 
     const response = await fetch(`${stravaApiPath}/athlete`, options);
 
-    const bro = (await response.json()) as AthleteInformationResponse;
-
-    console.log(bro);
-
-    return bro;
+    return (await response.json()) as AthleteInformationResponse;
   };

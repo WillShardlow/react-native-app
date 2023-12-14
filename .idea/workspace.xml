@@ -5,12 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4b18a043-5fe1-4685-9c85-3ed49e248223" name="Changes" comment="strava integration">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/Text.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/AthleteSummary.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/AthleteSummary.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/integrations/strava.ts" beforeDir="false" afterPath="$PROJECT_DIR$/integrations/strava.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript JSX File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -41,6 +52,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "prettierjs.PrettierConfiguration.Package": "C:\\Users\\WJS\\AppData\\Roaming\\npm\\node_modules\\prettier",
     "settings.editor.selected.configurable": "settings.javascript.prettier",
     "ts.external.directory.path": "C:\\Users\\WJS\\repos\\react-native-app\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
@@ -68,6 +80,7 @@
       <workItem from="1701354463474" duration="68000" />
       <workItem from="1702031809349" duration="1142000" />
       <workItem from="1702033347298" duration="9000" />
+      <workItem from="1702563284720" duration="4418000" />
     </task>
     <task id="LOCAL-00001" summary="strava integration">
       <option name="closed" value="true" />

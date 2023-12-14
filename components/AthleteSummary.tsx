@@ -1,18 +1,48 @@
-import { getAthleteInformation } from "../integrations/strava";
+import {
+  AthleteInformationResponse,
+  fetchAthleteInformation,
+} from "../integrations/strava";
 import { useEffect, useState } from "react";
-import { Text } from "react-native";
+import { Image, StyleSheet, View } from "react-native";
+import { Text } from "./Text";
 
 export const AthleteSummary = () => {
-  const [firstName, setFirstName] = useState("");
+  const [athleteInformation, setAthleteInformation] =
+    useState<AthleteInformationResponse>();
 
   useEffect(() => {
-    const getFirstName = async () => {
-      const { firstname } = await getAthleteInformation();
-      setFirstName(firstname);
+    const getAthleteInformation = async () => {
+      const athleteInformation = await fetchAthleteInformation();
+      setAthleteInformation(athleteInformation);
     };
 
-    getFirstName();
+    getAthleteInformation();
   }, []);
 
-  return <Text>{`Hello my name is ${firstName}`}</Text>;
+  return (
+    <View style={styles.container}>
+      <Image
+        source={{ uri: athleteInformation?.profile }}
+        style={styles.image}
+      />
+      <Text>{`${athleteInformation?.firstname} ${athleteInformation?.lastname}`}</Text>
+    </View>
+  );
 };
+
+const imageSizeInPixels = 200;
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+
+  image: {
+    width: imageSizeInPixels,
+    height: imageSizeInPixels,
+    borderRadius: imageSizeInPixels / 2,
+    marginBottom: 20,
+  },
+});

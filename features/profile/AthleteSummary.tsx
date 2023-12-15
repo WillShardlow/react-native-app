@@ -1,12 +1,19 @@
 import {
   AthleteInformationResponse,
   fetchAthleteInformation,
-} from "../integrations/strava";
+} from "../../integrations/strava";
 import { useEffect, useState } from "react";
-import { Image, StyleSheet, View } from "react-native";
-import { Text } from "./Text";
+import { Button, Image, StyleSheet, View } from "react-native";
+import { Text } from "../../components/Text";
+import { NativeStackScreenProps } from "@react-navigation/native-stack";
+import { ProfileStackParamList } from "./Profile";
 
-export const AthleteSummary = () => {
+type AthleteSummaryProps = NativeStackScreenProps<
+  ProfileStackParamList,
+  "AthleteSummary"
+>;
+
+export const AthleteSummary = ({ navigation }: AthleteSummaryProps) => {
   const [athleteInformation, setAthleteInformation] =
     useState<AthleteInformationResponse>();
 
@@ -26,6 +33,7 @@ export const AthleteSummary = () => {
         style={styles.image}
       />
       <Text>{`${athleteInformation?.firstname} ${athleteInformation?.lastname}`}</Text>
+      <Button title="Shoes" onPress={() => navigation.push("Shoes")} />
     </View>
   );
 };

@@ -35,6 +35,7 @@ const imageSizeInPixels = 200;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor: "rgba(19,124,206,0.2)",
     alignItems: "center",
     justifyContent: "center",
   },
